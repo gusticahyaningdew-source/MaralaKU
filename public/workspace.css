@@ -160,3 +160,51 @@ input,select,textarea{background:#f7f9fc;border:1px solid transparent;border-rad
 }
 @media(prefers-reduced-motion:reduce){.overview-shortcut{transition:none}}
 @media print{#marala-mobile-nav,.overview-shortcuts,.overview-start{display:none!important}.overview-metrics .overview-revenue{background:white!important;color:black!important}.overview-metrics .overview-revenue strong{color:black!important}}
+.pos-product-choice{cursor:pointer;user-select:none}
+.pos-extra{border:1px solid #dce9f6;border-radius:12px;padding:10px 14px;margin:12px 0;display:grid;gap:12px}
+.pos-extra>summary{cursor:pointer;font-weight:600;color:#2f5878}
+.pos-extra>summary small{font-weight:400;color:#7d93a6}
+.pos-extra[open]>summary{margin-bottom:4px}
+.dark .pos-extra{border-color:#354c6a}.dark .pos-extra>summary{color:#cfe6ff}
+@media(max-width:800px){
+ .pos-product:not(:has([data-pos-check]:checked)){min-height:0}
+ .pos-product:not(:has([data-pos-check]:checked)) .pos-quantity{display:none}
+ .pos-product:not(:has([data-pos-check]:checked)) .pos-product-choice>span::after{content:'+ Ketuk untuk pilih';white-space:nowrap;display:block;font-size:11px;color:#7d93a6;line-height:1.6}
+}
+@media(max-width:600px){
+ #marala-trial-bar{flex-wrap:nowrap;padding:8px 16px;gap:8px}
+ #marala-trial-bar>div{flex-wrap:nowrap;gap:6px;min-width:0}
+ #marala-trial-bar strong{display:none}
+ #marala-trial-bar .trial-text{white-space:nowrap}
+ #marala-trial-bar a,#marala-trial-bar button{white-space:nowrap;padding:5px 8px}
+ .content[data-page=poscashier]>.welcome{display:none}
+ body:has(.content[data-page=poscashier]) .marala-wa-float{display:none}
+}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.page-skeleton{display:grid;gap:16px;padding:8px 0;animation:marala-fade .2s .15s both}
+.page-skeleton i{display:block;border-radius:14px;background:linear-gradient(90deg,#dce7f3 25%,#eef4fa 45%,#dce7f3 65%);background-size:300% 100%;animation:marala-shimmer 1.3s linear infinite}
+.page-skeleton .sk-title{width:min(260px,60%);height:30px}
+.page-skeleton .sk-line{width:min(380px,85%);height:14px}
+.page-skeleton .sk-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.page-skeleton .sk-cards i{height:96px}
+.page-skeleton .sk-block{height:220px}
+.dark .page-skeleton i{background-image:linear-gradient(90deg,#1c2e45 25%,#253c58 45%,#1c2e45 65%)}
+#content>*:not(.pos-mobile-checkout):not(.page-skeleton),.marala-overview>*,.metrics>*,.shortcut-grid>*,.overview-detail-grid>*{animation:marala-rise .38s cubic-bezier(.2,.7,.2,1) backwards}
+#content>:nth-child(2),.marala-overview>:nth-child(2),.metrics>:nth-child(2),.shortcut-grid>:nth-child(2),.overview-detail-grid>:nth-child(2){animation-delay:.05s}
+#content>:nth-child(3),.marala-overview>:nth-child(3),.metrics>:nth-child(3),.shortcut-grid>:nth-child(3){animation-delay:.1s}
+#content>:nth-child(4),.marala-overview>:nth-child(4),.metrics>:nth-child(4),.shortcut-grid>:nth-child(4){animation-delay:.15s}
+#content>:nth-child(n+5),.marala-overview>:nth-child(n+5),.metrics>:nth-child(n+5),.shortcut-grid>:nth-child(n+5){animation-delay:.2s}
+.metric strong{font-variant-numeric:tabular-nums}
+.monthly-column i{transform-origin:bottom;animation:marala-grow-y .7s .25s cubic-bezier(.2,.7,.2,1) backwards}
+.monthly-bar:nth-child(2) .monthly-column i{animation-delay:.3s}.monthly-bar:nth-child(3) .monthly-column i{animation-delay:.35s}.monthly-bar:nth-child(n+4) .monthly-column i{animation-delay:.4s}
+.report-track i{transform-origin:left;animation:marala-grow-x .7s .25s cubic-bezier(.2,.7,.2,1) backwards}
+@keyframes marala-rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes marala-fade{from{opacity:0}to{opacity:1}}
+@keyframes marala-shimmer{from{background-position:100% 0}to{background-position:0 0}}
+@keyframes marala-grow-y{from{transform:scaleY(0)}to{transform:none}}
+@keyframes marala-grow-x{from{transform:scaleX(0)}to{transform:none}}
+@media(prefers-reduced-motion:reduce){.page-skeleton,.page-skeleton i,#content>*,.marala-overview>*,.metrics>*,.shortcut-grid>*,.overview-detail-grid>*,.monthly-column i,.report-track i{animation:none}}
+@media print{#content *{animation:none!important}}
+.page-error{max-width:420px;margin:48px auto;padding:28px 24px;text-align:center;border-radius:18px;background:#fff;border:1px solid #dce9f6;animation:marala-rise .3s cubic-bezier(.2,.7,.2,1) backwards}
+.page-error h3{margin:0 0 6px;color:#163d66}.page-error p{margin:0 0 18px;color:#607c9c}
+.dark .page-error{background:#192c43;border-color:#354c6a}.dark .page-error h3{color:#e0eeff}.dark .page-error p{color:#a6b7cc}
