@@ -1,3 +1,4 @@
+@font-face{font-family:'Plus Jakarta Sans';src:url('/assets/plus-jakarta-sans-latin-wght.woff2') format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
 :root{--blue:#075abd;--blue2:#078de4;--navy:#063c83;--bg:#f5faff;--pale:#eaf5ff;--line:#dfebf7}.sidebar{background:linear-gradient(160deg,#075bb9,#063c83)}.brand-icon img{width:33px;height:33px;object-fit:contain;border-radius:6px}.brand small{letter-spacing:1px}.primary{background:linear-gradient(110deg,#0787df,#0754be)}.card{border-radius:16px}#marala-trial-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#eaf5ff;color:#0754be;padding:11px 24px;border-bottom:1px solid #d3e5f9;font:12px 'Segoe UI',sans-serif}#marala-trial-bar>div{display:flex;align-items:center;gap:12px;flex-wrap:wrap}#marala-trial-bar strong{font-size:18px;letter-spacing:-.8px}#marala-trial-bar small{color:#607c9c}#marala-trial-bar a,#marala-trial-bar button{font:inherit;text-decoration:none;color:inherit;background:white;border:1px solid #cfe1f5;padding:7px 10px;border-radius:8px;cursor:pointer}#marala-trial-bar.expired{background:#fff3e8;color:#965117;border-color:#f2d7ba}.topbar{top:0}#marala-guide-layer{position:fixed;inset:0;background:#071e4670;z-index:100;display:grid;place-items:center;padding:20px;overflow-y:auto}.marala-guide-card{max-width:570px;width:100%;background:white;color:#172d4d;padding:30px;border-radius:22px;box-shadow:0 20px 70px #07275550}.marala-guide-card>span{color:#0784d1;font-size:11px;letter-spacing:1.5px;font-weight:700}.marala-guide-card h2{font-size:28px;letter-spacing:-1px;line-height:1.25;margin:17px 0}.marala-guide-card p{color:#657a95;line-height:1.7}.marala-guide-card ol{padding-left:23px;line-height:1.8}.marala-guide-card li{padding:8px 0}.marala-guide-card>div{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.marala-guide-card button{font:inherit;padding:12px 15px;border:1px solid #dfebf7;border-radius:10px;background:#eaf5ff;color:#0754be;cursor:pointer}.marala-guide-card #guide-start{background:#075abd;color:white}.guide-note{font-size:12px}.dark #marala-trial-bar{background:#1b365b;color:#b6ddff}.dark #marala-trial-bar a,.dark #marala-trial-bar button{background:#172235;border-color:#354c6a}@media(max-width:600px){#marala-trial-bar{padding:12px 15px}.marala-guide-card{padding:23px}.marala-guide-card h2{font-size:24px}}
 :root{--blue:#0766d4;--blue2:#009ee9;--navy:#092c5b;--bg:#eef5fc;--pale:#e8f3ff;--line:#dce8f5;--text:#153353;--muted:#688099;--shadow:0 8px 24px #174a8110}
 body{font-family:'Segoe UI',Arial,sans-serif;background:radial-gradient(ellipse at 90% 0,#d5efff,transparent 50%),var(--bg)}
@@ -169,7 +170,7 @@ input,select,textarea{background:#f7f9fc;border:1px solid transparent;border-rad
 @media(max-width:800px){
  .pos-product:not(:has([data-pos-check]:checked)){min-height:0}
  .pos-product:not(:has([data-pos-check]:checked)) .pos-quantity{display:none}
- .pos-product:not(:has([data-pos-check]:checked)) .pos-product-choice>span::after{content:'+ Ketuk untuk pilih';white-space:nowrap;display:block;font-size:11px;color:#7d93a6;line-height:1.6}
+ .pos-product:not(:has([data-pos-check]:checked)) .pos-product-choice>span::after{content:'+ Pilih';white-space:nowrap;display:block;font-size:11px;color:#7d93a6;line-height:1.6}
 }
 @media(max-width:600px){
  #marala-trial-bar{flex-wrap:nowrap;padding:8px 16px;gap:8px}
@@ -208,3 +209,186 @@ input,select,textarea{background:#f7f9fc;border:1px solid transparent;border-rad
 .page-error{max-width:420px;margin:48px auto;padding:28px 24px;text-align:center;border-radius:18px;background:#fff;border:1px solid #dce9f6;animation:marala-rise .3s cubic-bezier(.2,.7,.2,1) backwards}
 .page-error h3{margin:0 0 6px;color:#163d66}.page-error p{margin:0 0 18px;color:#607c9c}
 .dark .page-error{background:#192c43;border-color:#354c6a}.dark .page-error h3{color:#e0eeff}.dark .page-error p{color:#a6b7cc}
+
+/* ===== Lapisan desain "Nota": token tunggal, tinta navy sebagai jangkar, struk sebagai ciri khas ===== */
+:root{--ink:#0e2238;--ink-2:#1d3756;--brand:#0b5bc4;--brand-press:#084a9f;--brand-soft:#e7effb;--paper:#f2f4f7;--surface:#fff;--sunken:#f7f9fb;--rule:#dfe5ec;--rule-strong:#c9d3de;--ink-muted:#55677b;--ink-faint:#7a899a;--pos:#0e7a4a;--neg:#b42318;--lift:0 1px 2px rgba(14,34,56,.06),0 10px 28px -14px rgba(14,34,56,.22);--ui:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif}
+html body.dark{--ink:#e6eef8;--ink-2:#c3d2e4;--brand:#6aa8ff;--brand-press:#8dbcff;--brand-soft:#1b3152;--paper:#0d1724;--surface:#152233;--sunken:#111d2c;--rule:#26364b;--rule-strong:#35485f;--ink-muted:#a2b3c7;--ink-faint:#8394a8;--pos:#5fd39b;--neg:#ff9a8f;--lift:0 1px 2px rgba(0,0,0,.3),0 12px 30px -14px rgba(0,0,0,.6)}
+html body{--bg:var(--paper);--card:var(--surface);--text:var(--ink);--muted:var(--ink-muted);--line:var(--rule);--blue:var(--brand);--navy:var(--ink);--pale:var(--brand-soft);font-family:var(--ui);font-size:14px;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+html body button,html body input,html body select,html body textarea{font-family:var(--ui)}
+html body .main{background:transparent}
+
+/* Rangka: sidebar putih tenang, item aktif bertinta */
+html body .sidebar{background:var(--surface);border:1px solid var(--rule);box-shadow:none}
+html body .sidebar .brand strong{color:var(--ink);letter-spacing:-.2px}
+html body .sidebar .brand small{color:var(--ink-faint);letter-spacing:.2px;text-transform:none;font-size:11.5px}
+html body .nav a,html body .nav-section>summary{color:var(--ink-muted);font-weight:500;border-radius:10px}
+html body .nav a:hover,html body .nav-section>summary:hover{background:var(--sunken);color:var(--ink)}
+html body .nav a.active,html body .nav a.active:hover{background:var(--ink);color:var(--surface);box-shadow:none}
+html body .nav a.active svg{color:currentColor;stroke:currentColor}
+html body #marala-trial-bar{background:transparent;border:0;color:var(--ink-muted);font-size:12px}
+html body #marala-trial-bar strong{color:var(--ink);font-size:15px;letter-spacing:-.3px}
+html body #marala-trial-bar .trial-text{background:var(--brand-soft);color:var(--brand);font-weight:600}
+html body #marala-trial-bar a,html body #marala-trial-bar button{background:var(--surface);border:1px solid var(--rule);color:var(--ink-muted)}
+html body #marala-trial-bar.expired .trial-text{background:#fdeee6;color:#a3460c}
+html body .topbar{background:color-mix(in srgb,var(--paper) 88%,transparent);border-bottom:1px solid transparent}
+html body .page-head h1{color:var(--ink-muted);font-weight:600;font-size:14px}
+
+/* Tipografi dan angka */
+html body h1,html body h2,html body h3{color:var(--ink);letter-spacing:-.02em}
+html body .welcome h2,html body .overview-heading h2{font-size:30px;font-weight:800;letter-spacing:-.035em;line-height:1.15}
+html body .welcome p,html body .overview-heading p,html body .muted{color:var(--ink-muted)}
+html body .overview-eyebrow,html body .greeting-dot,html body .overview-section-heading>span{display:none}
+html body .marala-money,html body .metric strong,html body td{font-variant-numeric:tabular-nums}
+
+/* Kontrol */
+html body .primary{background:var(--brand);color:#fff;border:1px solid var(--brand);border-radius:10px;font-weight:650;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 1px 2px rgba(14,34,56,.18)}
+html body .primary:hover{background:var(--brand-press);border-color:var(--brand-press);filter:none}
+html body .secondary{background:var(--surface);color:var(--ink);border:1px solid var(--rule-strong);border-radius:10px;font-weight:600;box-shadow:none}
+html body .secondary:hover{background:var(--sunken);border-color:var(--ink-faint)}
+html body .secondary[aria-pressed=true]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+html body input,html body select,html body textarea{background:var(--surface);border:1px solid var(--rule-strong);border-radius:10px;color:var(--ink)}
+html body input:hover,html body select:hover,html body textarea:hover{border-color:var(--ink-faint)}
+html body input:focus,html body select:focus,html body textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 22%,transparent);outline:0}
+html body input[readonly]{background:var(--sunken);color:var(--ink-muted)}
+html body label{color:var(--ink-muted);font-weight:500}
+html body :focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+
+/* Permukaan: hierarki lewat radius dan bayangan, bukan warna seragam */
+html body .card{background:var(--surface);border:1px solid var(--rule);border-radius:16px;box-shadow:var(--lift)}
+html body th{background:var(--sunken);color:var(--ink-muted);text-transform:none;letter-spacing:0;font-size:12px;font-weight:600}
+html body td{border-color:var(--rule);color:var(--ink)}
+html body tbody tr:hover td{background:var(--sunken)}
+html body .toast{background:var(--ink);color:var(--surface);border-radius:12px;box-shadow:var(--lift)}
+html body.dark .toast{background:#e6eef8;color:#0e2238}
+
+/* Ciri khas: struk. Pendapatan tampil sebagai nota bertinta dengan tepi sobek. */
+html body .overview-metrics.metrics{column-gap:0;row-gap:16px}
+html body .overview-metrics .overview-revenue{--tear:9px;background:var(--ink);color:#fff;border:0;border-radius:20px 20px 0 0;padding:28px 30px calc(30px + var(--tear));box-shadow:none;-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(2*var(--tear)) 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(2*var(--tear)) 100%}
+html body.dark .overview-metrics .overview-revenue{background:#1f3d63}
+html body .overview-metrics .overview-revenue *{color:inherit}
+html body .overview-metrics .overview-revenue .metric-heading{color:#b9c8da;font-weight:500}
+html body .overview-metrics .overview-revenue strong{font-size:clamp(36px,5vw,52px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin:10px 0 6px;color:#fff}
+html body .overview-metrics .overview-revenue small{color:#9fb1c6;border-top:1px dashed rgba(255,255,255,.22);padding-top:12px;display:block}
+html body .overview-metrics .overview-revenue .overview-start{background:#fff;color:#0e2238;border:0;border-radius:10px;font-weight:700;box-shadow:none}
+html body .overview-metrics .overview-revenue .overview-start:hover{background:#e8eef6}
+/* Tiga angka pendukung menjadi satu baris buku kas, bukan tiga kartu kembar */
+html body .overview-metrics .metric:not(.overview-revenue){background:var(--surface);border:1px solid var(--rule);border-left-width:0;border-radius:0;box-shadow:none;min-height:0;padding:18px 22px}
+html body .overview-metrics .metric:nth-child(2){border-left-width:1px;border-radius:14px 0 0 14px}
+html body .overview-metrics .metric:last-child{border-radius:0 14px 14px 0}
+html body .overview-metrics .metric:not(.overview-revenue) .muted{color:var(--ink-muted);font-weight:500;font-size:12.5px}
+html body .overview-metrics .metric:not(.overview-revenue) strong{color:var(--ink);font-size:22px;font-weight:750;letter-spacing:-.02em}
+html body .overview-metrics .metric:not(.overview-revenue) small{color:var(--ink-faint)}
+html body .overview-metrics .metric:nth-child(2) strong{color:var(--pos)}
+
+/* Pintasan: tenang, ikon bertinta */
+html body .overview-shortcut{background:var(--surface);border:1px solid var(--rule);border-radius:14px;box-shadow:none;color:var(--ink);font-weight:600}
+html body .overview-shortcut:hover{border-color:var(--ink-faint);transform:translateY(-1px);box-shadow:var(--lift)}
+html body .overview-shortcut svg{color:var(--ink);stroke:currentColor}
+html body .overview-attention{background:var(--sunken);border:1px solid var(--rule);box-shadow:none}
+html body .monthly-column i{background:var(--brand);border-radius:8px 8px 3px 3px}
+html body .monthly-bar:last-child .monthly-column i{background:var(--ink)}
+html body .report-track{background:var(--sunken)}
+html body .report-track i{background:var(--brand)}
+
+/* Kasir: kartu produk bersih, total sebagai struk kertas */
+html body .pos-product{background:var(--surface);border:1px solid var(--rule);border-radius:14px}
+html body .pos-product:hover{background:var(--surface);border-color:var(--ink-faint);box-shadow:none}
+html body .pos-product:has(input:checked){background:var(--brand-soft);border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}
+html body .pos-product-choice strong{color:var(--ink);font-weight:600}
+html body .pos-product-choice span{color:var(--ink-muted)}
+html body .pos-product-choice .marala-money{color:var(--brand);font-weight:700}
+html body .pos-quantity{background:var(--surface);border:1px solid var(--rule)}
+html body .pos-quantity button{background:var(--sunken);color:var(--ink)}
+html body .pos-payment{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--lift)}
+html body .pos-payment>summary{color:var(--ink);font-weight:700}
+html body .pos-payment #posTotals{--tear:7px;background:var(--sunken);color:var(--ink);border:0;border-top:1px dashed var(--rule-strong);border-radius:0;padding:16px 4px calc(16px + var(--tear));-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(2*var(--tear)) 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(2*var(--tear)) 100%}
+html body .pos-payment #posTotals h2{color:var(--ink);font-size:30px;font-weight:800;letter-spacing:-.03em;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+html body .pos-payment #posTotals h2 small{font-size:13px;font-weight:600;color:var(--ink-muted);letter-spacing:0}
+html body .pos-payment #posTotals p{color:var(--ink-muted);display:flex;justify-content:space-between}
+html body .pos-extra{border-color:var(--rule)}
+html body .pos-mobile-checkout{background:var(--ink);color:#fff}
+html body .pos-mobile-checkout *{color:inherit}
+html body .pos-mobile-checkout .primary{background:#fff;color:#0e2238;border-color:#fff}
+html body.dark .pos-mobile-checkout{background:#1f3d63}
+
+/* Navigasi bawah ponsel */
+html body #marala-mobile-nav{background:color-mix(in srgb,var(--surface) 94%,transparent);border-top:1px solid var(--rule)}
+html body #marala-mobile-nav button{color:var(--ink-faint)}
+html body #marala-mobile-nav button.active{background:var(--ink);color:var(--surface)}
+
+/* Skeleton dan pesan galat mengikuti token */
+html body .page-skeleton i{background-image:linear-gradient(90deg,var(--rule) 25%,var(--sunken) 45%,var(--rule) 65%)}
+html body .page-error{background:var(--surface);border-color:var(--rule);box-shadow:var(--lift)}
+html body .page-error h3{color:var(--ink)}
+html body .page-error p{color:var(--ink-muted)}
+
+@media(max-width:800px){
+ html body .overview-metrics .metric:not(.overview-revenue){border-left-width:1px;border-top-width:0;border-radius:0}
+ html body .overview-metrics .metric:nth-child(2){border-top-width:1px;border-radius:14px 14px 0 0}
+ html body .overview-metrics .metric:last-child{border-radius:0 0 14px 14px}
+ html body .overview-metrics.metrics{row-gap:0;background:none;border-radius:0;overflow:visible}
+ html body .overview-metrics .overview-revenue{margin-bottom:16px}
+}
+@media(max-width:600px){
+ html body .welcome h2,html body .overview-heading h2{font-size:25px}
+ html body .overview-metrics .overview-revenue{padding:22px 20px calc(24px + var(--tear))}
+}
+@media print{html body .overview-metrics .overview-revenue{-webkit-mask:none;mask:none}}
+html body .overview-start span{display:none}
+html body .shortcut-icon,html body .overview-shortcut:nth-child(n) .shortcut-icon{background:var(--sunken);color:var(--ink);border:1px solid var(--rule)}
+html body .overview-shortcut:hover .shortcut-icon{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+@media(min-width:1051px){html body .overview-shortcuts{display:none}}
+html body .pos-layout>section.panel{background:var(--surface);border:1px solid var(--rule);box-shadow:var(--lift);padding:22px}
+html body .pos-layout>section.panel h3{color:var(--ink);font-weight:700}
+html body .pos-layout>section.panel input:not([type=checkbox]):not([type=number]),html body .pos-layout>section.panel select{background:var(--surface);color:var(--ink);border:1px solid var(--rule-strong)}
+html body .pos-products{background:transparent;box-shadow:none;padding:0}
+@media(max-width:600px){html body .pos-layout>section.panel{padding:16px}}
+html body.dark .sidebar,html body.dark .card,html body.dark .pos-payment,html body.dark .pos-layout>section.panel,html body.dark .overview-shortcut,html body.dark .overview-metrics .metric:not(.overview-revenue){background:var(--surface);border-color:var(--rule)}
+html body.dark .overview-attention,html body.dark .pos-payment #posTotals{background:var(--sunken);border-color:var(--rule)}
+html body.dark .nav a.active,html body.dark .nav a.active:hover{background:var(--ink);color:var(--paper)}
+html body.dark .nav a,html body.dark .nav-section>summary{color:var(--ink-muted)}
+html body.dark .topbar{background:color-mix(in srgb,var(--paper) 88%,transparent);border-color:transparent}
+html body.dark #marala-trial-bar{background:transparent}
+html body.dark #marala-trial-bar a,html body.dark #marala-trial-bar button{background:var(--surface);border-color:var(--rule);color:var(--ink-muted)}
+html body.dark .pos-product,html body.dark .pos-quantity{background:var(--surface);border-color:var(--rule)}
+html body.dark .pos-product:has(input:checked){background:var(--brand-soft);border-color:var(--brand)}
+html body.dark .pos-layout>section.panel input:not([type=checkbox]):not([type=number]),html body.dark .pos-layout>section.panel select,html body.dark input,html body.dark select,html body.dark textarea{background:var(--sunken);color:var(--ink);border-color:var(--rule-strong)}
+html body.dark .pos-layout>section.panel h3,html body.dark .pos-payment>summary{color:var(--ink)}
+html body.dark .monthly-bar:last-child .monthly-column i{background:var(--ink)}
+html body.dark .secondary[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+html body.dark #marala-mobile-nav button.active{background:var(--ink);color:var(--paper)}
+html body .marala-guide-card{background:var(--surface);color:var(--ink);border:1px solid var(--rule);border-radius:20px;box-shadow:0 24px 70px -20px rgba(14,34,56,.45)}
+html body .marala-guide-card>span{color:var(--brand);letter-spacing:0;text-transform:none;font-size:13px;font-weight:600}
+html body .marala-guide-card h2{color:var(--ink);font-weight:800;letter-spacing:-.03em}
+html body .marala-guide-card p{color:var(--ink-muted)}
+html body .marala-guide-card li{color:var(--ink)}
+html body .marala-guide-card button{background:var(--surface);color:var(--ink);border:1px solid var(--rule-strong);border-radius:10px;font-weight:600}
+html body .marala-guide-card #guide-start{background:var(--brand);color:#fff;border-color:var(--brand)}
+html body.dark .marala-guide-card #guide-start{color:#0e2238}
+html body #marala-guide-layer{background:rgba(8,20,36,.55);backdrop-filter:blur(4px)}
+html body .modal{background:var(--surface);color:var(--ink);border:1px solid var(--rule)}
+html body .modal-foot{border-color:var(--rule)}
+html body .content label,html body .modal label{color:var(--ink-muted)}
+html body .content summary,html body .content .muted,html body .pagination span,html body .dashboard-period span,html body .overview-date{color:var(--ink-muted)}
+html body .user-name small,html body #marala-trial-bar small,html body .sidebar .brand small{color:var(--ink-muted)}
+html body .icon-btn,html body .topbar #logout,html body .topbar .secondary{color:var(--ink-muted)}
+html body .nav-chevron{color:var(--ink-faint)}
+html body .sidebar-close{color:var(--brand)}
+html body .content .primary,html body .modal .primary,html body .content a.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+html body .content .primary:hover,html body .modal .primary:hover{background:var(--brand-press);border-color:var(--brand-press)}
+html body.dark .content .primary,html body.dark .modal .primary{color:#0e2238}
+html body .metrics:not(.overview-metrics){background:var(--surface);border:1px solid var(--rule);box-shadow:none}
+html body .metrics:not(.overview-metrics) .metric{background:transparent}
+html body .metrics:not(.overview-metrics) .metric .muted,html body .metrics:not(.overview-metrics) .metric span{color:var(--ink-muted)}
+html body .metrics:not(.overview-metrics) .metric strong{color:var(--ink)}
+html body .content .secondary{color:var(--ink)}
+html body .pos-extra>summary small{color:var(--ink-muted)}
+html body .content .secondary[aria-pressed=true]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+html body.dark .content .secondary[aria-pressed=true]{color:var(--paper)}
+html body .content .pos-view-switch .secondary:not([aria-pressed=true]){color:var(--ink-muted)}
+html body .overview-metrics .metric:not(.overview-revenue) small{color:var(--ink-muted)}
+html body .overview-attention p,html body .overview-attention small,html body .overview-attention span{color:var(--ink-muted)}
+html body .overview-attention strong,html body .overview-attention h3{color:var(--ink)}
+html body .monthly-bar span,html body .monthly-bar strong,html body .monthly-revenue p{color:var(--ink-muted)}
+html body .pos-payment p,html body .pos-payment .muted{color:var(--ink-muted)}
+html body #posPay p.muted{color:var(--ink-muted)}
